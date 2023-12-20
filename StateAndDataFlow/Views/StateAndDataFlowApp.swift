@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct StateAndDataFlowApp: App {
+    @ObservedObject var settingsManager = SettingsManager()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView(settings: settingsManager)
         }
     }
 }
